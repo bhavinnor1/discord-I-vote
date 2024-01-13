@@ -1,0 +1,40 @@
+*{
+    font-family: 'proximanova_black';
+    /* outline: 1px solid limegreen; */
+}
+@font-face {
+    font-family: 'proximanova_black';
+    src: local('proximanova_black'),
+         url('../fonts/proximanova_black.otf') format('woff');
+}
+.header-text{
+    color: white;
+    line-height: 4rem;
+    font-size: 56px;
+}
+.btn-mee-six{
+    color: white;
+    fill: white;
+    padding: 12px 24px;
+}
+.btn-mee-six:hover{
+    color: white;
+}
+.bg-blue{
+    background-color: #3994ff;
+}
+.bg-blue:hover{
+    background-color: #057aff;
+}
+.bg-glass{
+    background-color: #ffffff1a;
+}
+.bg-glass:hover{
+    background-color: #ffffff46;
+}
+.premium-bg{
+    background-color: #ffc34f24;
+}
+.premium-bg:hover{
+    background-color: #fda9004e;
+}
