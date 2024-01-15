@@ -38,3 +38,10 @@
 .premium-bg:hover{
     background-color: #fda9004e;
 }
+
+@media screen and (max-width: 780px) {
+    .mg-sm{
+        margin: 0px 20px;
+    }
+  }
+  

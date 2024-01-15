@@ -4,9 +4,9 @@ import SeeFeatures from "../common/SeeFeatures";
 
 function PhotoAndInfo({ heading, para, img, first }) {
   return (
-    <div className="bg-dark text-light">
+    <div className="bg-dark text-light pb-3">
       <div className="container">
-        <div className="row pt-5">
+        <div className="row pt-3">
           <div className="col-md-6 pt-5" style={{
             order: first === "text" ? 2 : 1
           }}>

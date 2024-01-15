@@ -71,9 +71,9 @@ function HomePage() {
   return (
     <>
       <div className="bg-dark tree-bg">
-        <div className="row pt-5 pe-0 me-0">
+        <div className="pt-5">
           <div
-            className="row"
+            className="row pe-0 me-0 mg-sm"
             style={{
               backgroundImage: `url(${trees})`,
               backgroundPosition: "bottom",

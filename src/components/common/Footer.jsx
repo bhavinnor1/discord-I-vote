@@ -6,7 +6,7 @@ function Footer() {
     <div className="bg-dark text-light">
       <div className="container">
         <div className="row py-5">
-          <div className="col-md-3">
+          <div className="col-md-3 pb-3">
             <div className="d-flex flex-column align-items-between">
               <div>
                 <img src={logo} className="img-fluid" alt="" />
@@ -23,14 +23,14 @@ function Footer() {
             </div>
           </div>
           <div className="col-md-3"></div>
-          <div className="col-md-2">
+          <div className="col-md-2 pb-3">
             <div className="mb-3">Plugins</div>
             <div className="text-secondary mb-1">Server management</div>
             <div className="text-secondary mb-1">Utilities</div>
             <div className="text-secondary mb-1">Social Alerts</div>
             <div className="text-secondary mb-1">Engagement & Fun</div>
           </div>
-          <div className="col-md-2">
+          <div className="col-md-2 mb-3">
             <div className="mb-3">MEE6</div>
             <div className="text-secondary mb-1">Premium</div>
             <div className="text-secondary mb-1">Bot Personalizer</div>

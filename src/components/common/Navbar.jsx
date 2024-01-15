@@ -6,10 +6,12 @@ import crown from "../../assets/images/icons/crown.svg";
 
 function Navbar() {
   // const {name} = useParams();
-  const params = new URLSearchParams(window.location.search)
+  const params = new URLSearchParams(window.location.search);
   // console.log(window.location.search, params.get('name'), params.get('avatar'));
-  const name = params.get('name');
-  const avatar = params.get('avatar');
+  const name = params.get("name");
+  const avatar = params.get("avatar");
+  localStorage.setItem("name", name);
+  localStorage.setItem("avatar", avatar);
 
   // Now 'params' will contain the route parameters
   console.log("Navbar", name);
@@ -38,24 +40,65 @@ function Navbar() {
                 <img src={crown} className="img-fluid" alt="" />
                 <span className="ms-2">Premium</span>
               </a>
-              {name && avatar ? 
-              <div className="d-flex">
-                <img src={avatar} style={{
-                  width: '25px',
-                  height:'25px'
-                }} alt="L" className="img-fluid rounded-5" />
-                <div className="fw-bold text-light ms-2">{name}</div>
-              </div>
-            :  
-            
-              <a href={`${import.meta.env.VITE_BACKEND_URL}discord`} className="h6 btn btn-primary d-flex align-items-center mb-0">
-                Login with Discord
-              </a>
-}
+              {name && avatar ? (
+                <div className="d-flex">
+                  <img
+                    src={avatar}
+                    style={{
+                      width: "25px",
+                      height: "25px",
+                    }}
+                    alt="L"
+                    className="img-fluid rounded-5"
+                  />
+                  <div className="fw-bold text-light ms-2">{name}</div>
+                </div>
+              ) : (
+                <a
+                  href={`${import.meta.env.VITE_BACKEND_URL}discord`}
+                  className="h6 btn btn-primary d-flex align-items-center mb-0"
+                >
+                  Login with Discord
+                </a>
+              )}
             </div>
           </div>
         </div>
       </div>
+
+      {/* <div className="d-flex flex-column position-fixed top-0 bottom-0 start-0 end-0 bg-dark">
+        <div className="d-flex justify-content-between">
+          <div>
+            <img src={logo} className="img-fluid" alt="" />
+
+            <img src={logoText} className="img-fluid mx-3" alt="" />
+          </div>
+          <div>
+            <div className="d-flex">
+              <img
+                src={avatar}
+                style={{
+                  width: "25px",
+                  height: "25px",
+                }}
+                alt="L"
+                className="img-fluid rounded-5"
+              />
+              <div className="fw-bold text-light ms-2">{name}</div>
+            </div>
+          </div>
+        </div>
+        <div className="text-secondary h6 fw-bold mb-0 mx-3">Plugins</div>
+        <div className="text-secondary h6 fw-bold mb-0">Resources</div>
+      <div className="lang h6 fw-bold text-secondary mb-0">EN</div>
+      <a
+        href={`${import.meta.env.VITE_BACKEND_URL}discord`}
+        className="h6 btn btn-primary d-flex align-items-center mb-0"
+      >
+        Login with Discord
+      </a>
+      </div> */}
+
       {/* <Navigate to='/home'>Home</Navigate> */}
     </>
   );
