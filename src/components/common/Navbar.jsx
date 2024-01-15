@@ -34,7 +34,7 @@ function Navbar() {
                 <img src={crown} className="img-fluid" alt="" />
                 <span className="ms-2">Premium</span>
               </a>
-              <a href={`${import.meta.env.BACKEND_URL}discord`} className="h6 btn btn-primary d-flex align-items-center mb-0">
+              <a href={`${import.meta.env.VITE_BACKEND_URL}discord`} className="h6 btn btn-primary d-flex align-items-center mb-0">
                 Login with Discord
               </a>
             </div>
