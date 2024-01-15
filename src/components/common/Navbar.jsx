@@ -5,7 +5,11 @@ import logoText from "../../assets/images/icons/logo-text.svg";
 import crown from "../../assets/images/icons/crown.svg";
 
 function Navbar() {
-  const {name} = useParams();
+  // const {name} = useParams();
+  const params = new URLSearchParams(window.location.search)
+  // console.log(window.location.search, params.get('name'), params.get('avatar'));
+  const name = params.get('name');
+  const avatar = params.get('avatar');
 
   // Now 'params' will contain the route parameters
   console.log("Navbar", name);
@@ -34,9 +38,20 @@ function Navbar() {
                 <img src={crown} className="img-fluid" alt="" />
                 <span className="ms-2">Premium</span>
               </a>
+              {name && avatar ? 
+              <div className="d-flex">
+                <img src={avatar} style={{
+                  width: '25px',
+                  height:'25px'
+                }} alt="L" className="img-fluid rounded-5" />
+                <div className="fw-bold text-light ms-2">{name}</div>
+              </div>
+            :  
+            
               <a href={`${import.meta.env.VITE_BACKEND_URL}discord`} className="h6 btn btn-primary d-flex align-items-center mb-0">
                 Login with Discord
               </a>
+}
             </div>
           </div>
         </div>
