@@ -1,10 +1,14 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useParams, useSearchParams } from "react-router-dom";
 import logo from "../../assets/images/icons/logo.svg";
 import logoText from "../../assets/images/icons/logo-text.svg";
 import crown from "../../assets/images/icons/crown.svg";
 
 function Navbar() {
+  const {name} = useParams();
+
+  // Now 'params' will contain the route parameters
+  console.log("Navbar", name);
   return (
     <>
       <div className="bg-dark">
@@ -30,7 +34,7 @@ function Navbar() {
                 <img src={crown} className="img-fluid" alt="" />
                 <span className="ms-2">Premium</span>
               </a>
-              <a className="h6 btn btn-primary d-flex align-items-center mb-0">
+              <a href={`${import.meta.env.BACKEND_URL}discord`} className="h6 btn btn-primary d-flex align-items-center mb-0">
                 Login with Discord
               </a>
             </div>

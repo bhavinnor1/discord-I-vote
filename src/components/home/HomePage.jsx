@@ -102,8 +102,9 @@ function HomePage() {
             </div>
           </div>
           <div className="col-md-12">
-            {data.map((info) => (
+            {data.map((info, index) => (
               <PhotoAndInfo
+                key={index}
                 heading={info.heading}
                 para={info.para}
                 img={info.img}
