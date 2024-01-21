@@ -1,15 +1,20 @@
-import React from 'react'
-import { Route, Routes, useParams } from 'react-router-dom'
-import Home from './Home'
+import React from "react";
+import { Route, Routes, useParams } from "react-router-dom";
+import Home from "./Home";
+import Navbar from "../../components/common/Navbar";
+import Footer from "../../components/common/Footer";
 
 function Public() {
-  const {name, avatar} = useParams();
-  console.log("paramas", name, avatar);
+  const { name, avatar } = useParams();
   return (
-    <Routes>
-        <Route path='/' element={<Home />}></Route>
-    </Routes>
-  )
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+      </Routes>
+      <Footer />
+    </>
+  );
 }
 
-export default Public
+export default Public;

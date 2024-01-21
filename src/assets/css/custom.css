@@ -39,9 +39,64 @@
     background-color: #fda9004e;
 }
 
+.navbar-mobile{
+    display: none;
+}
+.logo-plugins{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sm-visible {
+    display: none;
+}
+
 @media screen and (max-width: 780px) {
     .mg-sm{
         margin: 0px 20px;
     }
+    .sm-visible {
+        display: block;
+    }
+    .logo-plugins{
+        display: block;
+    }
+    .navbar-mobile{
+        display: block;
+        transition: 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+        transform: translate(-100%);
+        position: fixed;
+        background: #171717;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    .pc-nav{
+        transform: translate(-1000%);
+        
+    }
+
+    .hamburger{
+        position: absolute;
+        right: 30px;
+    }
+      
+      .navbar-mobile.visible {
+        transform: translateX(0);
+      }
+
+      .navbar-mobile.invisible{
+        display: none;
+      }
+      
+
+    .p-absolute{
+        margin: 20px 0px;
+        position: absolute;
+        bottom: 0;
+    }
+
   }
   

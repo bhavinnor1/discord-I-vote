@@ -1,20 +1,19 @@
 // Index.js
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Navbar from "../components/common/Navbar";
-import Footer from "../components/common/Footer";
 import Public from "./Public";
 import Private from "./Private";
 
 function Index() {
+  localStorage.setItem('token', "123456789")
+  const login = localStorage.getItem("token");
+
   return (
     <>
-      <Navbar />
       <Routes>
+        {/* {login && <Route path="*" element={<Private />} />} */}
         <Route path="*" element={<Public />} />
-        <Route path="/private" element={<Private />} />
       </Routes>
-      <Footer />
     </>
   );
 }
